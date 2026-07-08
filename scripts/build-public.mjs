@@ -173,6 +173,7 @@ function renderIndex(entries) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Web参考サイト</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23f7f2df'/%3E%3Cpath d='M2 2h12v12H2z' fill='%23d73d2f'/%3E%3Cpath d='M4 4h8v8H4z' fill='%23f1c84b'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="./assets/site.css">
   </head>
   <body>

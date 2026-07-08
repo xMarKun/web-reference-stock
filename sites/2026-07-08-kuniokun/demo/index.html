@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>フッターでキャラクターを操作できるドット絵ミニゲーム</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23f7f2df'/%3E%3Cpath d='M2 2h12v12H2z' fill='%23d73d2f'/%3E%3Cpath d='M4 4h8v8H4z' fill='%23f1c84b'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main class="demo-page">
+      <section class="demo-stage" aria-labelledby="demo-title">
+        <p class="demo-kicker">Pixel Footer Interaction</p>
+        <h1 id="demo-title">フッターで遊べるドット絵ミニゲーム</h1>
+        <p class="demo-lead">サイトの最下部に、マウス追従とキー操作で反応する小さな遊び場を仕込むデモです。</p>
+
+        <div class="site-frame">
+          <div class="mock-content" aria-hidden="true">
+            <span class="mock-logo">DOT STATION</span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <footer class="pixel-footer" aria-label="遊べるフッター">
+            <div class="footer-top" aria-hidden="true">
+              <span>Footer Quest</span>
+              <span>000800</span>
+            </div>
+
+            <div class="playfield js-playfield" tabindex="0" aria-describedby="playfield-help">
+              <p id="playfield-help" class="sr-only">
+                マウス移動で小さなキャラクターが追従します。WASDでプレイヤーを移動し、Shiftでジャンプします。
+              </p>
+
+              <div class="sky-grid" aria-hidden="true"></div>
+              <div class="cloud cloud-a" aria-hidden="true"></div>
+              <div class="cloud cloud-b" aria-hidden="true"></div>
+              <div class="building building-a" aria-hidden="true"></div>
+              <div class="building building-b" aria-hidden="true"></div>
+              <div class="pixel-sign" aria-hidden="true">GO</div>
+              <div class="coin coin-a" aria-hidden="true"></div>
+              <div class="coin coin-b" aria-hidden="true"></div>
+
+              <div class="cursor-friend js-cursor-friend" aria-hidden="true">
+                <span class="friend-head"></span>
+                <span class="friend-body"></span>
+                <span class="friend-foot"></span>
+              </div>
+
+              <div class="player js-player" role="img" aria-label="操作できるドット絵キャラクター">
+                <span class="player-shadow" aria-hidden="true"></span>
+                <span class="player-head"></span>
+                <span class="player-hair"></span>
+                <span class="player-eye"></span>
+                <span class="player-body"></span>
+                <span class="player-arm player-arm-left"></span>
+                <span class="player-arm player-arm-right"></span>
+                <span class="player-leg player-leg-left"></span>
+                <span class="player-leg player-leg-right"></span>
+              </div>
+
+              <div class="ground" aria-hidden="true"></div>
+            </div>
+
+            <div class="touch-controls" aria-label="画面操作">
+              <div class="touch-dpad" aria-label="移動">
+                <button type="button" class="control control-up" data-control="up" aria-label="上へ">▲</button>
+                <button type="button" class="control control-left" data-control="left" aria-label="左へ">◀</button>
+                <button type="button" class="control control-down" data-control="down" aria-label="下へ">▼</button>
+                <button type="button" class="control control-right" data-control="right" aria-label="右へ">▶</button>
+              </div>
+              <button type="button" class="control control-jump" data-control="jump" aria-label="ジャンプ">●</button>
+            </div>
+          </footer>
+        </div>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
