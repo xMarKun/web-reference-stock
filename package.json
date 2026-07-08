@@ -1,0 +1,13 @@
+{
+  "name": "web-reference-stock",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "new": "node scripts/new-entry.mjs",
+    "build": "node scripts/build-public.mjs",
+    "preview": "node scripts/serve-public.mjs",
+    "audit": "node scripts/audit-public.mjs",
+    "check": "node scripts/build-public.mjs && node scripts/audit-public.mjs"
+  }
+}
