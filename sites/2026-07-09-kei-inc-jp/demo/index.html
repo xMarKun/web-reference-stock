@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>スクロールで画像がマスク表示される視差リビール</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23ffffff'/%3E%3Cpath d='M2 4h12v8H2z' fill='%23000000'/%3E%3Cpath d='M4 6h8v4H4z' fill='%2394b8c8'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main>
+      <section class="kei-projects" aria-labelledby="section-title">
+        <div class="section-line js-anime js-mask-line"></div>
+        <hgroup class="section-head js-anime">
+          <p class="head-en line-clip"><span>Featured Projects</span></p>
+          <h1 id="section-title" class="head-ja line-clip"><span>これまでの実績</span></h1>
+        </hgroup>
+
+        <div class="project-stack">
+          <article class="project-link is-large js-project js-anime" id="project-1">
+            <a href="#project-1" aria-label="Shizuka Field のデモを見る">
+              <div class="project-mask js-mask">
+                <div class="project-parallax js-parallax">
+                  <div class="project-thumb">
+                    <div class="project-image image-field js-parallax-item" role="img" aria-label="窓越しの田園風景を抽象化した画像"></div>
+                  </div>
+                </div>
+                <div class="hover-thumb" aria-hidden="true">
+                  <span></span>
+                </div>
+              </div>
+              <div class="project-body">
+                <h2 class="project-title js-shine">Shizuka Field</h2>
+                <p class="sr-only">農と酒の文化に誰もが参加できる、新たな風景を</p>
+                <div class="project-catch" aria-hidden="true">
+                  <p>農と酒の文化に</p>
+                  <p>誰もが参加できる、</p>
+                  <p>新たな風景を</p>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-link is-right js-project js-anime" id="project-2">
+            <a href="#project-2" aria-label="Kintsugi Room のデモを見る">
+              <div class="project-mask js-mask">
+                <div class="project-parallax js-parallax">
+                  <div class="project-thumb">
+                    <div class="project-image image-still js-parallax-item" role="img" aria-label="暗い室内の静物を抽象化した画像"></div>
+                  </div>
+                </div>
+                <div class="hover-thumb" aria-hidden="true">
+                  <span></span>
+                </div>
+              </div>
+              <div class="project-body">
+                <h2 class="project-title js-shine">Kintsugi Room</h2>
+                <p class="sr-only">金継ぎと骨董に宿る手仕事の静かな美</p>
+                <div class="project-catch" aria-hidden="true">
+                  <p>金継ぎと</p>
+                  <p>骨董に宿る</p>
+                  <p>手仕事の静かな美</p>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="project-link is-third js-project js-anime" id="project-3">
+            <a href="#project-3" aria-label="Analogue Tone のデモを見る">
+              <div class="project-mask js-mask">
+                <div class="project-parallax js-parallax">
+                  <div class="project-thumb">
+                    <div class="project-image image-paper js-parallax-item" role="img" aria-label="紙と光の重なりを抽象化した画像"></div>
+                  </div>
+                </div>
+                <div class="hover-thumb" aria-hidden="true">
+                  <span></span>
+                </div>
+              </div>
+              <div class="project-body">
+                <h2 class="project-title js-shine">Analogue Tone</h2>
+                <p class="sr-only">アナログの魅力を再発見するメディアデザイン</p>
+                <div class="project-catch" aria-hidden="true">
+                  <p>アナログの</p>
+                  <p>魅力を再発見する</p>
+                  <p>メディアデザイン</p>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

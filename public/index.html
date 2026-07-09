@@ -17,11 +17,11 @@
         </div>
         <div class="stats" aria-label="ストック概要">
           <div class="stat">
-            <strong>1</strong>
+            <strong>2</strong>
             <span>entries</span>
           </div>
           <div class="stat">
-            <strong>2026-07-08</strong>
+            <strong>2026-07-09</strong>
             <span>latest</span>
           </div>
         </div>
@@ -33,13 +33,36 @@
             <button class="filter-button is-active" type="button" data-filter="all">すべて</button>
             <button class="filter-button" type="button" data-filter="footer">footer</button>
             <button class="filter-button" type="button" data-filter="game">game</button>
+            <button class="filter-button" type="button" data-filter="image">image</button>
             <button class="filter-button" type="button" data-filter="micro-interaction">micro-interaction</button>
+            <button class="filter-button" type="button" data-filter="parallax">parallax</button>
             <button class="filter-button" type="button" data-filter="pixel">pixel</button>
+            <button class="filter-button" type="button" data-filter="scroll">scroll</button>
+            <button class="filter-button" type="button" data-filter="transition">transition</button>
         </div>
       </section>
 
       <main>
         <section class="grid" aria-label="ストック一覧">
+        <article class="stock-card" data-card data-tags="scroll parallax transition image">
+          <div class="preview" aria-hidden="true">
+            <iframe src="./sites/2026-07-09-kei-inc-jp/index.html" title="KEI inc. preview" loading="lazy"></iframe>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>2026-07-09</span>
+              <span>2026-07-09-kei-inc-jp</span>
+            </div>
+            <h2 class="card-title">KEI inc.</h2>
+            <p class="detail">`is-mask` の長いマスク表示と、`height: 120%` の内側画像をスクロール量で縦移動させる視差リビール</p>
+            <p class="detail">画像がスクロール位置に合わせてマスクの内側から静かに現れ、表示開始の瞬間に余韻がある。 / 大きな余白、明朝体、縦組みキャプションの組み合わせで、実績一覧でも作品の静けさが崩れない。 / 画像・見出し・細い罫線の移動量が少しずつ違い、強い演出ではなく自然な奥行きとして視差が効いている。</p>
+            <div class="tags"><span class="tag">scroll</span><span class="tag">parallax</span><span class="tag">transition</span><span class="tag">image</span></div>
+            <div class="links">
+              <a class="link-button primary" href="./sites/2026-07-09-kei-inc-jp/index.html">デモを見る</a>
+              <a class="link-button" href="https://kei-inc.jp/" target="_blank" rel="noreferrer">参考サイト</a>
+            </div>
+          </div>
+        </article>
         <article class="stock-card" data-card data-tags="micro-interaction game pixel footer">
           <div class="preview" aria-hidden="true">
             <iframe src="./sites/2026-07-08-kuniokun/index.html" title="熱血硬派くにおくん preview" loading="lazy"></iframe>

@@ -1,5 +1,24 @@
 [
   {
+    "slug": "2026-07-09-kei-inc-jp",
+    "title": "KEI inc.",
+    "url": "https://kei-inc.jp/",
+    "date": "2026-07-09",
+    "tags": [
+      "scroll",
+      "parallax",
+      "transition",
+      "image"
+    ],
+    "detail": "`is-mask` の長いマスク表示と、`height: 120%` の内側画像をスクロール量で縦移動させる視差リビール",
+    "goodPoints": [
+      "画像がスクロール位置に合わせてマスクの内側から静かに現れ、表示開始の瞬間に余韻がある。",
+      "大きな余白、明朝体、縦組みキャプションの組み合わせで、実績一覧でも作品の静けさが崩れない。",
+      "画像・見出し・細い罫線の移動量が少しずつ違い、強い演出ではなく自然な奥行きとして視差が効いている。"
+    ],
+    "demoHref": "./sites/2026-07-09-kei-inc-jp/index.html"
+  },
+  {
     "slug": "2026-07-08-kuniokun",
     "title": "熱血硬派くにおくん",
     "url": "https://www.kuniokun.jp/",
