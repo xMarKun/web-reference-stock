@@ -17,11 +17,11 @@
         </div>
         <div class="stats" aria-label="ストック概要">
           <div class="stat">
-            <strong>2</strong>
+            <strong>3</strong>
             <span>entries</span>
           </div>
           <div class="stat">
-            <strong>2026-07-09</strong>
+            <strong>2026-07-10</strong>
             <span>latest</span>
           </div>
         </div>
@@ -33,10 +33,13 @@
             <button class="filter-button is-active" type="button" data-filter="all">すべて</button>
             <button class="filter-button" type="button" data-filter="footer">footer</button>
             <button class="filter-button" type="button" data-filter="game">game</button>
+            <button class="filter-button" type="button" data-filter="hover">hover</button>
             <button class="filter-button" type="button" data-filter="image">image</button>
+            <button class="filter-button" type="button" data-filter="layout">layout</button>
             <button class="filter-button" type="button" data-filter="micro-interaction">micro-interaction</button>
             <button class="filter-button" type="button" data-filter="parallax">parallax</button>
             <button class="filter-button" type="button" data-filter="pixel">pixel</button>
+            <button class="filter-button" type="button" data-filter="press">press</button>
             <button class="filter-button" type="button" data-filter="scroll">scroll</button>
             <button class="filter-button" type="button" data-filter="transition">transition</button>
         </div>
@@ -44,6 +47,25 @@
 
       <main>
         <section class="grid" aria-label="ストック一覧">
+        <article class="stock-card" data-card data-tags="hover press micro-interaction layout">
+          <div class="preview" aria-hidden="true">
+            <iframe src="./sites/2026-07-10-units-gr/index.html" title="Units preview" loading="lazy"></iframe>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>2026-07-10</span>
+              <span>2026-07-10-units-gr</span>
+            </div>
+            <h2 class="card-title">Units</h2>
+            <p class="detail">押し込みで奥から画像が流れてくるレイヤード画像リール</p>
+            <p class="detail">左の情報カードと右の大きなビジュアルカードを同じ角丸・罫線で揃え、全体をベントーグリッドのように見せている。 / 右側ギャラリーは箱の内側を覗くような奥行き表現で、写真タイルと色タイルが壁・床・天井に貼られている。 / ホバー時に `Press to Start` の小さな黒いカーソルが出て、押下すると奥から流れてくる速度だけが一気に上がる。</p>
+            <div class="tags"><span class="tag">hover</span><span class="tag">press</span><span class="tag">micro-interaction</span><span class="tag">layout</span></div>
+            <div class="links">
+              <a class="link-button primary" href="./sites/2026-07-10-units-gr/index.html">デモを見る</a>
+              <a class="link-button" href="https://units.gr/en/homepage/" target="_blank" rel="noreferrer">参考サイト</a>
+            </div>
+          </div>
+        </article>
         <article class="stock-card" data-card data-tags="scroll parallax transition image">
           <div class="preview" aria-hidden="true">
             <iframe src="./sites/2026-07-09-kei-inc-jp/index.html" title="KEI inc. preview" loading="lazy"></iframe>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>押し込みで奥から画像が流れてくるレイヤード画像リール</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23f4e9e1'/%3E%3Cpath d='M2 2h12v12H2z' fill='none' stroke='%23000000' stroke-width='1.2'/%3E%3Cpath d='M5 5h6v6H5z' fill='%23ff6100'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main class="units-demo">
+      <section class="units-layout" aria-labelledby="demo-title">
+        <div class="info-panel">
+          <p class="eyebrow">Our Units</p>
+          <div class="headline-group">
+            <h1 id="demo-title">Student living,<br>reframed.</h1>
+            <p>奥行きのあるギャラリーで、ユニットの雰囲気を連続した体験として見せるデモ。</p>
+          </div>
+
+          <ul class="feature-list" aria-label="ユニットの特徴">
+            <li><span class="feature-icon bed" aria-hidden="true"></span>家具付き</li>
+            <li><span class="feature-icon desk" aria-hidden="true"></span>専用ワークスペース</li>
+            <li><span class="feature-icon kitchen" aria-hidden="true"></span>ミニキッチン</li>
+            <li><span class="feature-icon bath" aria-hidden="true"></span>専用バスルーム</li>
+            <li><span class="feature-icon tv" aria-hidden="true"></span>スマートTV</li>
+            <li><span class="feature-icon wifi" aria-hidden="true"></span>高速Wi-Fi</li>
+          </ul>
+
+          <a class="panel-cta" href="#tunnel-gallery">
+            <span>Check units</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <button class="tunnel-button" id="tunnel-gallery" type="button" aria-label="画像リールを押し込む">
+          <canvas class="tunnel-canvas" width="1200" height="900" aria-hidden="true"></canvas>
+          <span class="press-cursor" aria-hidden="true">Press</span>
+        </button>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

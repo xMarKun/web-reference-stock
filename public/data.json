@@ -1,5 +1,24 @@
 [
   {
+    "slug": "2026-07-10-units-gr",
+    "title": "Units",
+    "url": "https://units.gr/en/homepage/",
+    "date": "2026-07-10",
+    "tags": [
+      "hover",
+      "press",
+      "micro-interaction",
+      "layout"
+    ],
+    "detail": "押し込みで奥から画像が流れてくるレイヤード画像リール",
+    "goodPoints": [
+      "左の情報カードと右の大きなビジュアルカードを同じ角丸・罫線で揃え、全体をベントーグリッドのように見せている。",
+      "右側ギャラリーは箱の内側を覗くような奥行き表現で、写真タイルと色タイルが壁・床・天井に貼られている。",
+      "ホバー時に `Press to Start` の小さな黒いカーソルが出て、押下すると奥から流れてくる速度だけが一気に上がる。"
+    ],
+    "demoHref": "./sites/2026-07-10-units-gr/index.html"
+  },
+  {
     "slug": "2026-07-09-kei-inc-jp",
     "title": "KEI inc.",
     "url": "https://kei-inc.jp/",
