@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 960" role="img" aria-labelledby="title desc">
+  <title id="title">静かな軌道</title>
+  <desc id="desc">青い惑星と光の軌道を描いた抽象作品</desc>
+  <defs>
+    <radialGradient id="space" cx="36%" cy="22%" r="90%">
+      <stop offset="0" stop-color="#6de1ed"/>
+      <stop offset=".35" stop-color="#174d70"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </radialGradient>
+    <radialGradient id="planet" cx="35%" cy="28%" r="72%">
+      <stop offset="0" stop-color="#e4fff9"/>
+      <stop offset=".42" stop-color="#72c8c2"/>
+      <stop offset=".8" stop-color="#1c6270"/>
+      <stop offset="1" stop-color="#0a2239"/>
+    </radialGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="11"/>
+    </filter>
+  </defs>
+  <rect width="720" height="960" fill="url(#space)"/>
+  <circle cx="600" cy="136" r="80" fill="#78efff" opacity=".2" filter="url(#glow)"/>
+  <circle cx="363" cy="463" r="206" fill="url(#planet)"/>
+  <ellipse cx="363" cy="463" rx="292" ry="64" fill="none" stroke="#fff1ae" stroke-width="7" opacity=".9" transform="rotate(-14 363 463)"/>
+  <ellipse cx="363" cy="463" rx="318" ry="77" fill="none" stroke="#90f3ff" stroke-width="2" opacity=".45" transform="rotate(-14 363 463)"/>
+  <path d="M0 755C160 693 292 736 418 706s201-86 302-52v306H0Z" fill="#06101c" opacity=".82"/>
+  <g fill="#fff">
+    <circle cx="91" cy="102" r="2"/><circle cx="167" cy="286" r="3"/><circle cx="572" cy="294" r="2"/><circle cx="655" cy="508" r="2"/><circle cx="83" cy="588" r="2"/>
+  </g>
+  <text x="62" y="775" fill="#fff" font-family="serif" font-size="60" letter-spacing="11">QUIET ORBIT</text>
+  <text x="66" y="822" fill="#b5ebef" font-family="sans-serif" font-size="18" letter-spacing="8">A STORY BEYOND THE BLUE</text>
+  <path d="M64 858h592" stroke="#b5ebef" stroke-width="1" opacity=".55"/>
+  <text x="65" y="902" fill="#fff" font-family="sans-serif" font-size="14" letter-spacing="4">VISUAL EXPERIMENT 01</text>
+</svg>

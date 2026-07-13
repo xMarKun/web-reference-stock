@@ -1,0 +1,229 @@
+:root {
+  color-scheme: light;
+  --paper: #f3f1eb;
+  --ink: #16191d;
+  --muted: #656a70;
+  --line: #c9c8c2;
+  font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--paper);
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--ink);
+}
+
+.demo-page {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: clamp(24px, 5vw, 72px);
+}
+
+.demo-stage {
+  width: min(1080px, 100%);
+}
+
+.demo-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr);
+  gap: clamp(32px, 8vw, 96px);
+  align-items: end;
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+
+.demo-kicker {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Times New Roman", "Yu Mincho", serif;
+  font-size: clamp(2.4rem, 6vw, 5.6rem);
+  font-weight: 400;
+  line-height: .98;
+  letter-spacing: -.05em;
+}
+
+.demo-lead {
+  max-width: 38em;
+  margin: 0;
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.9;
+}
+
+.demo-surface {
+  min-height: 580px;
+  display: grid;
+  grid-template-columns: minmax(280px, 340px) minmax(200px, 1fr);
+  align-items: center;
+  gap: clamp(36px, 8vw, 112px);
+  padding: clamp(20px, 5vw, 64px);
+  border-block: 1px solid var(--line);
+}
+
+.immersive-card {
+  --card-text: var(--ink);
+  position: relative;
+  isolation: isolate;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+  padding: 34px;
+  border: 1px solid var(--line);
+  color: var(--card-text);
+  text-decoration: none;
+}
+
+.immersive-card__atmosphere {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: linear-gradient(rgb(0 0 0 / 25%), rgb(0 0 0 / 25%)), var(--art);
+  background-position: center;
+  background-size: cover;
+  filter: blur(40px);
+  opacity: 0;
+  transform: scale(.7);
+  transition: opacity 1s cubic-bezier(.5, 0, 0, 1), transform 1s cubic-bezier(.5, 0, 0, 1);
+}
+
+.immersive-card__visual {
+  width: min(78%, 210px);
+  margin-inline: auto;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 22%);
+  box-shadow: 0 20px 48px rgb(0 0 0 / 12%);
+}
+
+.immersive-card__visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.immersive-card__copy {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.immersive-card__eyebrow {
+  margin-bottom: 9px;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+}
+
+.immersive-card strong {
+  font-family: "Yu Mincho", "Times New Roman", serif;
+  font-size: 1.65rem;
+  font-weight: 500;
+  letter-spacing: .05em;
+}
+
+.immersive-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  color: #666b70;
+  font-size: .64rem;
+  letter-spacing: .04em;
+}
+
+.immersive-card__rule {
+  width: 1px;
+  height: 9px;
+  background: currentColor;
+  opacity: .45;
+}
+
+.immersive-card:hover,
+.immersive-card:focus-visible {
+  --card-text: #fff;
+}
+
+.immersive-card:hover .immersive-card__atmosphere,
+.immersive-card:focus-visible .immersive-card__atmosphere {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.immersive-card:hover .immersive-card__meta,
+.immersive-card:focus-visible .immersive-card__meta {
+  color: rgb(255 255 255 / 72%);
+}
+
+.immersive-card:focus-visible {
+  outline: 3px solid #ffca5c;
+  outline-offset: 5px;
+}
+
+.immersive-card,
+.immersive-card__meta {
+  transition: color 1s cubic-bezier(.5, 0, 0, 1);
+}
+
+.demo-note {
+  display: grid;
+  grid-template-columns: auto minmax(70px, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  color: var(--muted);
+  font-size: .68rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.demo-note svg {
+  width: 100%;
+  max-width: 160px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1;
+}
+
+@media (max-width: 760px) {
+  .demo-header,
+  .demo-surface {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-surface {
+    justify-items: center;
+    min-height: 0;
+  }
+
+  .immersive-card {
+    width: min(100%, 340px);
+  }
+
+  .demo-note {
+    width: min(100%, 340px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .immersive-card,
+  .immersive-card__meta,
+  .immersive-card__atmosphere {
+    transition-duration: .01ms;
+  }
+}

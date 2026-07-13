@@ -1,5 +1,23 @@
 [
   {
+    "slug": "2026-07-13-gundam-official-com",
+    "title": "GUNDAM Official Website",
+    "url": "https://gundam-official.com/",
+    "date": "2026-07-13",
+    "tags": [
+      "hover",
+      "micro-interaction",
+      "image",
+      "blur"
+    ],
+    "detail": "同じ画像をぼかして背景へ広げる没入型カードホバー",
+    "goodPoints": [
+      "個人的に、カードへマウスを重ねたときのホバー表現が好き。",
+      "単純に黒く塗りつぶすのではなく、カードで使っている画像をぼかして背景へ広げることで、作品の中へ入るような没入感がある。"
+    ],
+    "demoHref": "./sites/2026-07-13-gundam-official-com/index.html"
+  },
+  {
     "slug": "2026-07-10-units-gr",
     "title": "Units",
     "url": "https://units.gr/en/homepage/",

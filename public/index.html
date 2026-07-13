@@ -17,11 +17,11 @@
         </div>
         <div class="stats" aria-label="ストック概要">
           <div class="stat">
-            <strong>3</strong>
+            <strong>4</strong>
             <span>entries</span>
           </div>
           <div class="stat">
-            <strong>2026-07-10</strong>
+            <strong>2026-07-13</strong>
             <span>latest</span>
           </div>
         </div>
@@ -31,6 +31,7 @@
         <input class="search" type="search" placeholder="サイト名・タグ・メモを検索" data-search>
         <div class="filters">
             <button class="filter-button is-active" type="button" data-filter="all">すべて</button>
+            <button class="filter-button" type="button" data-filter="blur">blur</button>
             <button class="filter-button" type="button" data-filter="footer">footer</button>
             <button class="filter-button" type="button" data-filter="game">game</button>
             <button class="filter-button" type="button" data-filter="hover">hover</button>
@@ -47,6 +48,25 @@
 
       <main>
         <section class="grid" aria-label="ストック一覧">
+        <article class="stock-card" data-card data-tags="hover micro-interaction image blur">
+          <div class="preview" aria-hidden="true">
+            <iframe src="./sites/2026-07-13-gundam-official-com/index.html" title="GUNDAM Official Website preview" loading="lazy"></iframe>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>2026-07-13</span>
+              <span>2026-07-13-gundam-official-com</span>
+            </div>
+            <h2 class="card-title">GUNDAM Official Website</h2>
+            <p class="detail">同じ画像をぼかして背景へ広げる没入型カードホバー</p>
+            <p class="detail">個人的に、カードへマウスを重ねたときのホバー表現が好き。 / 単純に黒く塗りつぶすのではなく、カードで使っている画像をぼかして背景へ広げることで、作品の中へ入るような没入感がある。</p>
+            <div class="tags"><span class="tag">hover</span><span class="tag">micro-interaction</span><span class="tag">image</span><span class="tag">blur</span></div>
+            <div class="links">
+              <a class="link-button primary" href="./sites/2026-07-13-gundam-official-com/index.html">デモを見る</a>
+              <a class="link-button" href="https://gundam-official.com/" target="_blank" rel="noreferrer">参考サイト</a>
+            </div>
+          </div>
+        </article>
         <article class="stock-card" data-card data-tags="hover press micro-interaction layout">
           <div class="preview" aria-hidden="true">
             <iframe src="./sites/2026-07-10-units-gr/index.html" title="Units preview" loading="lazy"></iframe>
