@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="具材が積み上がるローディングと、スクロールで貼り付くシールのオリジナルデモ">
+    <title>STACK! DELI — ローディングとシール演出</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231b37a8'/%3E%3Cpath d='M14 34h36v10H14z' fill='%23ff6b55'/%3E%3Cpath d='M18 22c0-7 28-7 28 0v8H18z' fill='%23d7ff56'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body class="is-loading">
+    <div class="loader is-playing" data-loader role="dialog" aria-modal="true" aria-label="ページを準備中">
+      <div class="loader__curtains" aria-hidden="true">
+        <svg class="loader__curtain loader__curtain--back" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path data-curtain-path fill="#ff6b55" d="M -2 -2 H 102 V 102 Q 50 102 -2 102 Z"></path>
+        </svg>
+        <svg class="loader__curtain loader__curtain--middle" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path data-curtain-path fill="#d7ff56" d="M -2 -2 H 102 V 102 Q 50 102 -2 102 Z"></path>
+        </svg>
+        <svg class="loader__curtain loader__curtain--front" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path data-curtain-path fill="#1b37a8" d="M -2 -2 H 102 V 102 Q 50 102 -2 102 Z"></path>
+        </svg>
+      </div>
+
+      <div class="loader__stack" data-loader-stack aria-hidden="true">
+        <span class="loader__part loader__part--bottom" style="--index: 0; --rest-rotate: -1deg; --entry-rotate: 11deg"></span>
+        <span class="loader__part loader__part--patty" style="--index: 1; --rest-rotate: 2deg; --entry-rotate: -12deg"></span>
+        <span class="loader__part loader__part--cheese" style="--index: 2; --rest-rotate: -2deg; --entry-rotate: 10deg"></span>
+        <span class="loader__part loader__part--tomato" style="--index: 3; --rest-rotate: 3deg; --entry-rotate: -11deg"></span>
+        <span class="loader__part loader__part--leaf" style="--index: 4; --rest-rotate: -3deg; --entry-rotate: 9deg"></span>
+        <span class="loader__part loader__part--top" style="--index: 5; --rest-rotate: 1deg; --entry-rotate: -10deg"></span>
+
+        <span class="loader__spark" style="--spark-x: -142px; --spark-y: -82px; --spark-delay: 0ms"></span>
+        <span class="loader__spark" style="--spark-x: -82px; --spark-y: -148px; --spark-delay: 35ms"></span>
+        <span class="loader__spark" style="--spark-x: 0px; --spark-y: -168px; --spark-delay: 70ms"></span>
+        <span class="loader__spark" style="--spark-x: 92px; --spark-y: -142px; --spark-delay: 15ms"></span>
+        <span class="loader__spark" style="--spark-x: 154px; --spark-y: -72px; --spark-delay: 55ms"></span>
+        <span class="loader__spark" style="--spark-x: 168px; --spark-y: 8px; --spark-delay: 90ms"></span>
+        <span class="loader__spark" style="--spark-x: 118px; --spark-y: 84px; --spark-delay: 20ms"></span>
+        <span class="loader__spark" style="--spark-x: 44px; --spark-y: 110px; --spark-delay: 65ms"></span>
+        <span class="loader__spark" style="--spark-x: -42px; --spark-y: 108px; --spark-delay: 5ms"></span>
+        <span class="loader__spark" style="--spark-x: -120px; --spark-y: 72px; --spark-delay: 80ms"></span>
+        <span class="loader__spark" style="--spark-x: -172px; --spark-y: 0px; --spark-delay: 40ms"></span>
+        <span class="loader__spark" style="--spark-x: 36px; --spark-y: -128px; --spark-delay: 100ms"></span>
+      </div>
+
+      <div class="loader__status" data-loader-status>
+        <p class="loader__eyebrow">STACK! DELI / OPENING SOON</p>
+        <p class="loader__message" data-loader-message aria-live="polite">おいしい土台を準備中…</p>
+        <div class="loader__progress" data-loader-progress role="progressbar" aria-label="読み込み進捗" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span data-loader-bar></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="site" data-site aria-hidden="true">
+      <header class="site-header">
+        <a class="site-logo" href="#top" aria-label="STACK! DELI トップへ">
+          <span>STACK!</span>
+          <small>DELI CLUB</small>
+        </a>
+        <nav class="site-nav" aria-label="デモ内ナビゲーション">
+          <a href="#sticker-scene">STICKER</a>
+          <button type="button" data-replay>もう一度見る</button>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero__copy">
+            <p class="hero__kicker">FRESHLY STACKED / TOKYO 2026</p>
+            <h1 id="hero-title">
+              <span>ひと口ごとに、</span>
+              <strong>GOOD DAY!</strong>
+            </h1>
+            <p class="hero__lead">はみ出すくらいが、ちょうどいい。色も具材も気分も重ねる、架空のデリスタンドです。</p>
+            <a class="hero__cta" href="#sticker-scene">
+              <span>シールを貼りにいく</span>
+              <svg viewBox="0 0 34 16" aria-hidden="true"><path d="M1 8h29M23 1l7 7-7 7"></path></svg>
+            </a>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <div class="hero__stamp">HOT<br>STACK</div>
+            <div class="hero-sandwich">
+              <span class="hero-sandwich__top"></span>
+              <span class="hero-sandwich__leaf"></span>
+              <span class="hero-sandwich__tomato"></span>
+              <span class="hero-sandwich__cheese"></span>
+              <span class="hero-sandwich__patty"></span>
+              <span class="hero-sandwich__bottom"></span>
+            </div>
+            <p class="hero__visual-note">6 layers<br>1 happy bite</p>
+          </div>
+
+          <div class="hero__scroll" aria-hidden="true">
+            <span>SCROLL</span>
+            <i></i>
+          </div>
+        </section>
+
+        <section class="sticker-scene" id="sticker-scene" data-sticker-scene aria-labelledby="sticker-title">
+          <div class="sticker-scene__sticky">
+            <div class="sticker-scene__copy">
+              <p class="section-kicker">02 / PEEL &amp; STICK</p>
+              <h2 id="sticker-title">スクロールが、<br><em>のり</em>になる。</h2>
+              <p>下へ進むほど折り返し面が上がり、表面が少しずつ接着します。上へ戻せば、同じ境界を逆向きにたどります。</p>
+            </div>
+
+            <div class="sticker-board">
+              <div class="sticker-board__tape" aria-hidden="true"></div>
+              <p class="sticker-board__number">No. 06</p>
+              <div class="sticker-board__menu">
+                <p>TODAY'S SPECIAL</p>
+                <strong>彩りを<br>全部のせ。</strong>
+                <span>CRUNCHY / JUICY / SUNNY</span>
+              </div>
+              <div class="sticker-board__stripes" aria-hidden="true"></div>
+
+              <div class="sticker-host" data-sticker aria-hidden="true">
+                <div class="sticker">
+                  <div class="sticker__front">
+                    <div class="sticker-art">
+                      <span>PICK ME!</span>
+                      <strong>PAK!</strong>
+                      <small>STACK &amp; SMILE</small>
+                    </div>
+                  </div>
+                  <div class="sticker__flap">
+                    <div class="sticker-art">
+                      <span>PICK ME!</span>
+                      <strong>PAK!</strong>
+                      <small>STACK &amp; SMILE</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sticker-meter" aria-hidden="true">
+              <span>PEEL</span>
+              <i><b data-sticker-meter></b></i>
+              <span>STUCK</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="closing" aria-labelledby="closing-title">
+          <p class="section-kicker">READY TO TAKE AWAY</p>
+          <h2 id="closing-title">貼ったあとの景色まで、<br>デザインする。</h2>
+          <p>ローディングで期待をつくり、スクロールで参加してもらう。ふたつの動きをひとつの体験へつなげました。</p>
+          <a href="#top">TOPへ戻る</a>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <strong>STACK!</strong>
+        <p>ORIGINAL MOTION STUDY / 2026</p>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

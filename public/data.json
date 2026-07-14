@@ -1,5 +1,24 @@
 [
   {
+    "slug": "2026-07-14-cravburgers-shop",
+    "title": "CRAV Burgers",
+    "url": "https://www.cravburgers.shop/",
+    "date": "2026-07-14",
+    "tags": [
+      "loading",
+      "scroll",
+      "micro-interaction",
+      "sticker",
+      "transition"
+    ],
+    "detail": "具材が積み上がるローディングと、スクロールで貼り付くシール演出を、1つのデモサイト内で連続して体験できるようにする。",
+    "goodPoints": [
+      "待ち時間を、具材が順番に積み上がる楽しいローディング体験へ変えている。",
+      "シールが単に現れるのではなく、折り返し面を見せながら貼り付く演出に手触りがある。"
+    ],
+    "demoHref": "./sites/2026-07-14-cravburgers-shop/index.html"
+  },
+  {
     "slug": "2026-07-13-gundam-official-com",
     "title": "GUNDAM Official Website",
     "url": "https://gundam-official.com/",
