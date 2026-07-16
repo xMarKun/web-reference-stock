@@ -1,5 +1,44 @@
 [
   {
+    "slug": "2026-07-16-meech213-com",
+    "title": "Meech213",
+    "url": "https://www.meech213.com/",
+    "date": "2026-07-16",
+    "tags": [
+      "scroll",
+      "webgl",
+      "slider",
+      "distortion",
+      "micro-interaction"
+    ],
+    "detail": "スクロール速度で歪む円形3Dスライダー",
+    "goodPoints": [
+      "円形に巡る3Dスライダーの立体感と質感が印象的。",
+      "スクロールを速くするほど画像の歪みが強くなり、操作速度がそのまま表現へ反映される。"
+    ],
+    "demoHref": "./sites/2026-07-16-meech213-com/index.html"
+  },
+  {
+    "slug": "2026-07-15-tplh-net",
+    "title": "TPLH",
+    "url": "https://www.tplh.net/",
+    "date": "2026-07-15",
+    "tags": [
+      "animation",
+      "webgl",
+      "transition",
+      "flag",
+      "fire"
+    ],
+    "detail": "燃えるエフェクトで靡く旗が切り替わるアニメーションを、デモページ内で小さく再現する。",
+    "goodPoints": [
+      "燃えるような境界が走りながら、旗の絵柄が次の旗へ切り替わる演出に勢いがある。",
+      "旗そのものが風で靡いているため、単なる画像切り替えではなく生きた布のように見える。",
+      "炎の明るい縁と黒い焦げ跡が切り替えマスクになり、場面転換に強い記憶が残る。"
+    ],
+    "demoHref": "./sites/2026-07-15-tplh-net/index.html"
+  },
+  {
     "slug": "2026-07-14-cravburgers-shop",
     "title": "CRAV Burgers",
     "url": "https://www.cravburgers.shop/",

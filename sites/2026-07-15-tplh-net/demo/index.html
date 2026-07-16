@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="燃えるエフェクトで靡く旗が切り替わるアニメーションのデモ">
+    <title>Burning Flag Transition Demo</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070707'/%3E%3Cpath d='M37 8c2 10-5 13-2 22 2-4 7-7 9-13 8 10 10 18 7 27-4 12-17 17-28 11C11 49 9 34 17 24c1 7 4 10 7 12-2-12 6-19 13-28Z' fill='%23ff7418'/%3E%3Cpath d='M34 30c4 7 4 11 1 16-2 3-7 4-10 1-4-4-2-10 2-14 0 4 2 6 4 7-1-4 1-7 3-10Z' fill='%23fff0a8'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main class="demo-shell" aria-labelledby="demo-title">
+      <section class="hero-card">
+        <div class="copy">
+          <div class="copy__text">
+            <p class="eyebrow">WebGL transition</p>
+            <h1 id="demo-title">燃える境界で旗が切り替わる</h1>
+            <p class="lead">風に靡く布の面へ炎が不規則に広がり、焼けた境界から次の旗が現れる最小デモです。</p>
+          </div>
+          <button class="switch-button" type="button" data-next>次の旗へ</button>
+        </div>
+
+        <figure class="flag-frame" data-frame aria-busy="false">
+          <canvas class="flag-canvas" width="1120" height="680" data-flag-canvas role="img" aria-label="炎が面状に広がり、風に靡く旗の柄が切り替わるアニメーション">WebGL に対応したブラウザで旗のアニメーションを表示できます。</canvas>
+          <p class="webgl-fallback" data-fallback role="status" hidden>この環境では WebGL を表示できません。</p>
+          <figcaption data-caption aria-live="polite" aria-atomic="true">EMBER / 01</figcaption>
+        </figure>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

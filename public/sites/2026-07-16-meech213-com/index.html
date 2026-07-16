@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="スクロール速度に応じて画像メッシュが歪む、円形配置のWebGL 3Dスライダーデモ">
+    <title>スクロール速度で歪む円形3Dスライダー</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23f3f1ec'/%3E%3Cellipse cx='32' cy='32' rx='22' ry='9' fill='none' stroke='%23151515' stroke-width='3'/%3E%3Crect x='27' y='19' width='10' height='26' rx='1' fill='%23ef6d4e'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main class="slider-stage">
+      <p class="visually-hidden" id="slider-instructions">
+        マウスホイールまたはトラックパッドで回転します。タッチ操作では上下左右へドラッグできます。キーボードでは上下矢印キーを使えます。
+      </p>
+      <canvas
+        class="dome-slider"
+        data-dome-canvas
+        width="1"
+        height="1"
+        tabindex="0"
+        role="img"
+        aria-label="円形に配置された画像がスクロール速度に応じて歪みながら回転する3Dスライダー"
+        aria-describedby="slider-instructions"
+      >
+        WebGLに対応したブラウザで3Dスライダーを表示できます。
+      </canvas>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

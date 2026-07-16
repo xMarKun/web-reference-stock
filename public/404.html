@@ -17,11 +17,11 @@
         </div>
         <div class="stats" aria-label="ストック概要">
           <div class="stat">
-            <strong>5</strong>
+            <strong>7</strong>
             <span>entries</span>
           </div>
           <div class="stat">
-            <strong>2026-07-14</strong>
+            <strong>2026-07-16</strong>
             <span>latest</span>
           </div>
         </div>
@@ -31,7 +31,11 @@
         <input class="search" type="search" placeholder="サイト名・タグ・メモを検索" data-search>
         <div class="filters">
             <button class="filter-button is-active" type="button" data-filter="all">すべて</button>
+            <button class="filter-button" type="button" data-filter="animation">animation</button>
             <button class="filter-button" type="button" data-filter="blur">blur</button>
+            <button class="filter-button" type="button" data-filter="distortion">distortion</button>
+            <button class="filter-button" type="button" data-filter="fire">fire</button>
+            <button class="filter-button" type="button" data-filter="flag">flag</button>
             <button class="filter-button" type="button" data-filter="footer">footer</button>
             <button class="filter-button" type="button" data-filter="game">game</button>
             <button class="filter-button" type="button" data-filter="hover">hover</button>
@@ -43,13 +47,53 @@
             <button class="filter-button" type="button" data-filter="pixel">pixel</button>
             <button class="filter-button" type="button" data-filter="press">press</button>
             <button class="filter-button" type="button" data-filter="scroll">scroll</button>
+            <button class="filter-button" type="button" data-filter="slider">slider</button>
             <button class="filter-button" type="button" data-filter="sticker">sticker</button>
             <button class="filter-button" type="button" data-filter="transition">transition</button>
+            <button class="filter-button" type="button" data-filter="webgl">webgl</button>
         </div>
       </section>
 
       <main>
         <section class="grid" aria-label="ストック一覧">
+        <article class="stock-card" data-card data-tags="scroll webgl slider distortion micro-interaction">
+          <div class="preview" aria-hidden="true">
+            <iframe src="./sites/2026-07-16-meech213-com/index.html" title="Meech213 preview" loading="lazy"></iframe>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>2026-07-16</span>
+              <span>2026-07-16-meech213-com</span>
+            </div>
+            <h2 class="card-title">Meech213</h2>
+            <p class="detail">スクロール速度で歪む円形3Dスライダー</p>
+            <p class="detail">円形に巡る3Dスライダーの立体感と質感が印象的。 / スクロールを速くするほど画像の歪みが強くなり、操作速度がそのまま表現へ反映される。</p>
+            <div class="tags"><span class="tag">scroll</span><span class="tag">webgl</span><span class="tag">slider</span><span class="tag">distortion</span><span class="tag">micro-interaction</span></div>
+            <div class="links">
+              <a class="link-button primary" href="./sites/2026-07-16-meech213-com/index.html">デモを見る</a>
+              <a class="link-button" href="https://www.meech213.com/" target="_blank" rel="noreferrer">参考サイト</a>
+            </div>
+          </div>
+        </article>
+        <article class="stock-card" data-card data-tags="animation webgl transition flag fire">
+          <div class="preview" aria-hidden="true">
+            <iframe src="./sites/2026-07-15-tplh-net/index.html" title="TPLH preview" loading="lazy"></iframe>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>2026-07-15</span>
+              <span>2026-07-15-tplh-net</span>
+            </div>
+            <h2 class="card-title">TPLH</h2>
+            <p class="detail">燃えるエフェクトで靡く旗が切り替わるアニメーションを、デモページ内で小さく再現する。</p>
+            <p class="detail">燃えるような境界が走りながら、旗の絵柄が次の旗へ切り替わる演出に勢いがある。 / 旗そのものが風で靡いているため、単なる画像切り替えではなく生きた布のように見える。 / 炎の明るい縁と黒い焦げ跡が切り替えマスクになり、場面転換に強い記憶が残る。</p>
+            <div class="tags"><span class="tag">animation</span><span class="tag">webgl</span><span class="tag">transition</span><span class="tag">flag</span><span class="tag">fire</span></div>
+            <div class="links">
+              <a class="link-button primary" href="./sites/2026-07-15-tplh-net/index.html">デモを見る</a>
+              <a class="link-button" href="https://www.tplh.net/" target="_blank" rel="noreferrer">参考サイト</a>
+            </div>
+          </div>
+        </article>
         <article class="stock-card" data-card data-tags="loading scroll micro-interaction sticker transition">
           <div class="preview" aria-hidden="true">
             <iframe src="./sites/2026-07-14-cravburgers-shop/index.html" title="CRAV Burgers preview" loading="lazy"></iframe>
