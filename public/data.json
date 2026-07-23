@@ -1,5 +1,22 @@
 [
   {
+    "slug": "2026-07-23-normalisboring-es",
+    "title": "Normal is Boring",
+    "url": "https://normalisboring.es/",
+    "date": "2026-07-23",
+    "tags": [
+      "footer",
+      "typography",
+      "scroll",
+      "micro-interaction"
+    ],
+    "detail": "`.mod-footer__bg` の文字が、フッターへ近づくスクロールに合わせて上部の短い字形から縦長の字形へ伸びる、スクロール連動のSVGモーフ。",
+    "goodPoints": [
+      "`.mod-footer__bg` で、文字そのものを使った演出がおもしろい。"
+    ],
+    "demoHref": "./sites/2026-07-23-normalisboring-es/index.html"
+  },
+  {
     "slug": "2026-07-22-wwwzz-jp",
     "title": "wwwzz.jp",
     "url": "https://wwwzz.jp/",

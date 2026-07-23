@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="スクロールに合わせてSVGの文字輪郭が縦に伸びる、オリジナルのタイポグラフィモーフデモ">
+    <title>FLOW — スクロール連動タイポグラフィモーフ</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23141412'/%3E%3Cpath d='M14 12h36v10H25v9h20v10H25v11H14z' fill='%23d9ff57'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-mark" href="#top" aria-label="FLOWデモの先頭へ">
+        <span>F.</span>
+        <small>VECTOR TYPE STUDY</small>
+      </a>
+      <p>SCROLL / MORPH / REVERSE</p>
+    </header>
+
+    <main>
+      <section class="intro" id="top" aria-labelledby="page-title">
+        <div class="intro__grid">
+          <p class="eyebrow">MOTION STUDY 09</p>
+          <h1 id="page-title"><span>文字は、</span><span>伸びていく。</span></h1>
+          <div class="intro__notes">
+            <p>読むための文字が、スクロールの終点を示す大きな背景へ変わります。</p>
+            <p>画像ではなく、オリジナルのSVG輪郭を連続的に変形しています。</p>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#morph">
+          <span>SCROLL TO STRETCH</span>
+          <i aria-hidden="true"></i>
+        </a>
+      </section>
+
+      <section class="morph-study" id="morph" aria-labelledby="morph-title" data-morph-section>
+        <div class="morph-study__heading">
+          <p>01 / VECTOR OUTLINE</p>
+          <h2 id="morph-title">短い字形から、<br>空間を埋める字形へ。</h2>
+          <p>下へ進むと伸び、上へ戻ると縮みます。4文字は同じ進行度で一斉に変形します。</p>
+        </div>
+
+        <div class="morph-frame">
+          <div class="morph-frame__meta" aria-hidden="true">
+            <span>COMPACT</span>
+            <output data-progress>000</output>
+            <span>EXTENDED</span>
+          </div>
+
+          <svg class="morph-word" data-morph-svg viewBox="0 0 960 800" role="img" aria-labelledby="word-title word-desc" preserveAspectRatio="xMidYMin meet">
+            <title id="word-title">FLOWの文字が縦に伸びるスクロールアニメーション</title>
+            <desc id="word-desc">スクロールに応じて、上部に並ぶFLOWの幾何学的な字形が下方向へ連続的に伸びます。</desc>
+
+            <path class="morph-letter" data-start="M30 70 H200 V120 H105 V155 H180 V205 H105 V260 H30 Z" data-end="M30 70 H200 V120 H105 V280 H180 V330 H105 V740 H30 Z" d="M30 70 H200 V120 H105 V155 H180 V205 H105 V260 H30 Z"></path>
+            <path class="morph-letter" data-start="M235 70 H310 V205 H430 V260 H235 Z" data-end="M235 70 H310 V675 H430 V740 H235 Z" d="M235 70 H310 V205 H430 V260 H235 Z"></path>
+            <path class="morph-letter" fill-rule="evenodd" data-start="M460 70 H680 V260 H460 Z M535 120 H605 V210 H535 Z" data-end="M460 70 H680 V740 H460 Z M535 120 H605 V690 H535 Z" d="M460 70 H680 V260 H460 Z M535 120 H605 V210 H535 Z"></path>
+            <path class="morph-letter" data-start="M710 70 H780 L800 205 L830 70 H900 L850 260 H760 Z" data-end="M710 70 H780 L800 675 L830 70 H900 L850 740 H760 Z" d="M710 70 H780 L800 205 L830 70 H900 L850 260 H760 Z"></path>
+
+            <g class="morph-word__guides" aria-hidden="true">
+              <path d="M0 70H960"></path>
+              <path d="M0 740H960"></path>
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <section class="outro" aria-labelledby="outro-title">
+        <p>02 / SCROLL-BACK</p>
+        <h2 id="outro-title">一方通行にしない。<br>戻る動きまで、ひとつの演出。</h2>
+        <a class="back-link" href="#top">
+          <span>先頭へ戻して、もう一度見る</span>
+          <svg viewBox="0 0 32 16" aria-hidden="true"><path d="M31 8H4M11 1 4 8l7 7"></path></svg>
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <strong>FLOW</strong>
+      <p>ORIGINAL VECTOR TYPE / 2026</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
