@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="スクロール進入に合わせて、モザイク状のビジュアルが左右から切り替わるオリジナルデモ">
+    <title>SIDE SHIFT — スクロール・モザイクギャラリー</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23161616'/%3E%3Cpath d='M8 10h22v22H8z' fill='%23d8ff3e'/%3E%3Cpath d='M34 32h22v22H34z' fill='%23515cff'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <svg class="art-defs" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="gradient-violet" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#6747ff"></stop>
+          <stop offset="1" stop-color="#252049"></stop>
+        </linearGradient>
+        <linearGradient id="gradient-sky" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0" stop-color="#2c4bff"></stop>
+          <stop offset="1" stop-color="#92efff"></stop>
+        </linearGradient>
+        <pattern id="pattern-check" width="200" height="200" patternUnits="userSpaceOnUse">
+          <rect width="100" height="100" fill="#f1efdf"></rect>
+          <rect x="100" width="100" height="100" fill="#161616"></rect>
+          <rect y="100" width="100" height="100" fill="#161616"></rect>
+          <rect x="100" y="100" width="100" height="100" fill="#f1efdf"></rect>
+        </pattern>
+
+        <symbol id="art-01" viewBox="0 0 800 800">
+          <rect width="800" height="800" fill="#515cff"></rect>
+          <circle cx="230" cy="220" r="190" fill="#d8ff3e"></circle>
+          <path d="M0 570 800 210v190L0 760Z" fill="#ff6d3a"></path>
+          <circle cx="615" cy="605" r="74" fill="#161616"></circle>
+        </symbol>
+        <symbol id="art-02" viewBox="0 0 800 800">
+          <rect width="800" height="800" fill="#f1efdf"></rect>
+          <path d="M-100 400h1000" stroke="#161616" stroke-width="140"></path>
+          <path d="M400-100v1000" stroke="#ff5fa2" stroke-width="140"></path>
+          <circle cx="400" cy="400" r="115" fill="#d8ff3e" stroke="#161616" stroke-width="26"></circle>
+        </symbol>
+        <symbol id="art-03" viewBox="0 0 800 800">
+          <rect width="800" height="800" fill="#ff6d3a"></rect>
+          <circle cx="400" cy="400" r="290" fill="none" stroke="#f1efdf" stroke-width="72"></circle>
+          <circle cx="400" cy="400" r="135" fill="#515cff"></circle>
+          <path d="m75 730 650-660" stroke="#161616" stroke-width="38"></path>
+        </symbol>
+        <symbol id="art-04" viewBox="0 0 800 800">
+          <rect width="800" height="800" fill="url(#gradient-violet)"></rect>
+          <path d="M0 625Q200 375 400 625T800 625V800H0Z" fill="#92efff"></path>
+          <path d="M0 500Q200 250 400 500T800 500" fill="none" stroke="#f1efdf" stroke-width="50"></path>
+          <circle cx="620" cy="180" r="76" fill="#ff5fa2"></circle>
+        </symbol>
+        <symbol id="art-05" viewBox="0 0 800 800">
+          <rect width="800" height="800" fill="#d8ff3e"></rect>
+          <path d="M145 800V390a255 255 0 0 1 510 0v410Z" fill="#161616"></path>
+          <path d="M250 800V420a150 150 0 0 1 300 0v380Z" fill="#ff6d3a"></path>
+          <circle cx="400" cy="300" r="58" fill="#f1efdf"></circle>
+        </symbol>
+        <symbol id="art-06" viewBox="0 0 800 800">
+          <rect width="800" height="800" fill="#161616"></rect>
+          <path d="M-70 670 270-30h180L110 670Z" fill="#515cff"></path>
+          <path d="m350 830 340-700h180L530 830Z" fill="#ff5fa2"></path>
+          <circle cx="545" cy="250" r="92" fill="#d8ff3e"></circle>
+        </symbol>
+        <symbol id="art-07" viewBox="0 0 800 800">
+          <rect width="800" height="800" fill="#f1efdf"></rect>
+          <path d="M80 90h155v620H80zm242 160h155v460H322zm243-110h155v570H565z" fill="#2c4bff"></path>
+          <path d="M0 595h800" stroke="#ff6d3a" stroke-width="48"></path>
+        </symbol>
+        <symbol id="art-08" viewBox="0 0 800 800">
+          <rect width="800" height="800" fill="url(#gradient-sky)"></rect>
+          <ellipse cx="400" cy="400" rx="250" ry="345" fill="#161616"></ellipse>
+          <ellipse cx="400" cy="400" rx="105" ry="200" fill="#d8ff3e"></ellipse>
+          <path d="M70 400h660" stroke="#f1efdf" stroke-width="28"></path>
+        </symbol>
+        <symbol id="art-09" viewBox="0 0 800 800">
+          <rect width="800" height="800" fill="#ff5fa2"></rect>
+          <g fill="#161616">
+            <circle cx="145" cy="145" r="80"></circle><circle cx="400" cy="145" r="80"></circle><circle cx="655" cy="145" r="80"></circle>
+            <circle cx="145" cy="400" r="80"></circle><circle cx="400" cy="400" r="80"></circle><circle cx="655" cy="400" r="80"></circle>
+            <circle cx="145" cy="655" r="80"></circle><circle cx="400" cy="655" r="80"></circle><circle cx="655" cy="655" r="80"></circle>
+          </g>
+          <circle cx="400" cy="400" r="80" fill="#d8ff3e"></circle>
+        </symbol>
+        <symbol id="art-10" viewBox="0 0 800 800">
+          <rect width="800" height="800" fill="#515cff"></rect>
+          <path d="M-80 165Q180 10 430 185t450 0v205Q650 565 395 380T-80 390Z" fill="#f1efdf"></path>
+          <path d="M-80 500q255-190 500 0t460 0v205q-235 185-480 0t-480 0Z" fill="#ff6d3a"></path>
+        </symbol>
+        <symbol id="art-11" viewBox="0 0 800 800">
+          <rect width="800" height="800" fill="url(#pattern-check)"></rect>
+          <circle cx="400" cy="400" r="238" fill="#d8ff3e" stroke="#515cff" stroke-width="42"></circle>
+          <path d="m270 400 88 88 180-196" fill="none" stroke="#161616" stroke-linecap="square" stroke-width="56"></path>
+        </symbol>
+        <symbol id="art-12" viewBox="0 0 800 800">
+          <rect width="800" height="800" fill="#20203a"></rect>
+          <circle cx="400" cy="400" r="286" fill="#ff5fa2"></circle>
+          <circle cx="525" cy="305" r="286" fill="#20203a"></circle>
+          <path d="M70 695h660" stroke="#92efff" stroke-width="32"></path>
+        </symbol>
+      </defs>
+    </svg>
+
+    <header class="demo-header">
+      <a class="demo-logo" href="#top" aria-label="SIDE SHIFT デモの先頭へ">
+        <span>SS</span>
+        <small>MOTION STUDY 07</small>
+      </a>
+      <p>SCROLL-TRIGGERED MOSAIC</p>
+    </header>
+
+    <main>
+      <section class="intro" id="top" aria-labelledby="demo-title">
+        <div class="intro__copy">
+          <p class="intro__eyebrow">SIDE SHIFT / ORIGINAL MOTION DEMO</p>
+          <h1 id="demo-title"><span>SCROLL</span><span>THE TILES.</span></h1>
+          <div class="intro__meta">
+            <p>画面へ入ったタイルから、左右へすれ違いながらビジュアルが切り替わります。</p>
+            <p>写真を使わず、オリジナルの図形だけで動きの仕組みを抽出しました。</p>
+          </div>
+        </div>
+        <div class="intro__cue" aria-hidden="true">
+          <span>SCROLL TO SHIFT</span>
+          <i></i>
+        </div>
+      </section>
+
+      <section class="gallery-study" aria-labelledby="gallery-title">
+        <div class="gallery-study__heading">
+          <p>01 / ENTER THE VIEWPORT</p>
+          <h2 id="gallery-title">一枚ずつではなく、<br>位置の違いで連鎖する。</h2>
+          <span>各タイルの上端が画面下端へ入ると、一度だけ切り替わります。</span>
+        </div>
+
+        <div class="mosaic" data-gallery role="img" aria-label="大小9枚のタイルが、スクロールに合わせて左右から順番に切り替わるモザイクギャラリー">
+          <figure class="mosaic__tile mosaic__tile--01 mosaic__tile--large mosaic__tile--left" data-gallery-tile>
+            <svg class="mosaic__layer mosaic__layer--off" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-01"></use></svg>
+            <svg class="mosaic__layer mosaic__layer--on" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-12"></use></svg>
+          </figure>
+          <figure class="mosaic__tile mosaic__tile--02 mosaic__tile--right" data-gallery-tile>
+            <svg class="mosaic__layer mosaic__layer--off" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-02"></use></svg>
+            <svg class="mosaic__layer mosaic__layer--on" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-07"></use></svg>
+          </figure>
+          <figure class="mosaic__tile mosaic__tile--03 mosaic__tile--right" data-gallery-tile>
+            <svg class="mosaic__layer mosaic__layer--off" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-05"></use></svg>
+            <svg class="mosaic__layer mosaic__layer--on" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-09"></use></svg>
+          </figure>
+          <figure class="mosaic__tile mosaic__tile--04 mosaic__tile--right" data-gallery-tile>
+            <svg class="mosaic__layer mosaic__layer--off" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-04"></use></svg>
+            <svg class="mosaic__layer mosaic__layer--on" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-02"></use></svg>
+          </figure>
+          <figure class="mosaic__tile mosaic__tile--05 mosaic__tile--right" data-gallery-tile>
+            <svg class="mosaic__layer mosaic__layer--off" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-10"></use></svg>
+            <svg class="mosaic__layer mosaic__layer--on" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-06"></use></svg>
+          </figure>
+          <figure class="mosaic__tile mosaic__tile--06 mosaic__tile--large mosaic__tile--left" data-gallery-tile>
+            <svg class="mosaic__layer mosaic__layer--off" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-08"></use></svg>
+            <svg class="mosaic__layer mosaic__layer--on" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-03"></use></svg>
+          </figure>
+          <figure class="mosaic__tile mosaic__tile--07 mosaic__tile--large mosaic__tile--left" data-gallery-tile>
+            <svg class="mosaic__layer mosaic__layer--off" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-11"></use></svg>
+            <svg class="mosaic__layer mosaic__layer--on" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-04"></use></svg>
+          </figure>
+          <figure class="mosaic__tile mosaic__tile--08 mosaic__tile--right" data-gallery-tile>
+            <svg class="mosaic__layer mosaic__layer--off" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-03"></use></svg>
+            <svg class="mosaic__layer mosaic__layer--on" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-10"></use></svg>
+          </figure>
+          <figure class="mosaic__tile mosaic__tile--09 mosaic__tile--right" data-gallery-tile>
+            <svg class="mosaic__layer mosaic__layer--off" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-09"></use></svg>
+            <svg class="mosaic__layer mosaic__layer--on" viewBox="0 0 800 800" aria-hidden="true"><use href="#art-05"></use></svg>
+          </figure>
+        </div>
+
+        <p class="gallery-study__caption"><span>LEFT 2.0S</span><span>RIGHT 2.4S</span><span>ONCE</span></p>
+      </section>
+
+      <section class="outro" aria-labelledby="outro-title">
+        <p>02 / KEEP THE FINAL STATE</p>
+        <h2 id="outro-title">通り過ぎたあとも、<br>切り替わった景色を残す。</h2>
+        <button class="replay-button" type="button" data-replay>
+          <span>先頭からもう一度見る</span>
+          <svg viewBox="0 0 32 16" aria-hidden="true"><path d="M1 8h27M21 1l7 7-7 7"></path></svg>
+        </button>
+      </section>
+    </main>
+
+    <footer class="demo-footer">
+      <strong>SIDE SHIFT</strong>
+      <p>ORIGINAL MOTION STUDY / 2026</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

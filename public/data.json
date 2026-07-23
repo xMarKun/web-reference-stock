@@ -1,5 +1,23 @@
 [
   {
+    "slug": "2026-07-22-wwwzz-jp",
+    "title": "wwwzz.jp",
+    "url": "https://wwwzz.jp/",
+    "date": "2026-07-22",
+    "tags": [
+      "gallery",
+      "scroll",
+      "micro-interaction"
+    ],
+    "detail": "`.indexGallery` の、スクロールで画面へ入ったタイルから左右にすれ違って切り替わるモザイクギャラリー。",
+    "goodPoints": [
+      "FVのインタラクティブスライダーがおもしろい。",
+      "「サービス」セクションの背景の動きがおもしろい。",
+      "`.indexGallery` のギャラリーの動きがおもしろい。"
+    ],
+    "demoHref": "./sites/2026-07-22-wwwzz-jp/index.html"
+  },
+  {
     "slug": "2026-07-16-meech213-com",
     "title": "Meech213",
     "url": "https://www.meech213.com/",

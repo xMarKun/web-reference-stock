@@ -4,6 +4,7 @@
 
 | 日付 | サイト | 抜き出す要素 | タグ | メモ |
 | --- | --- | --- | --- | --- |
+| 2026-07-22 | wwwzz.jp | `.indexGallery` の、スクロールで画面へ入ったタイルから左右にすれ違って切り替わるモザイクギャラリー。 | gallery, scroll, micro-interaction | [memo](sites/2026-07-22-wwwzz-jp/memo.md) |
 | 2026-07-16 | Meech213 | スクロール速度で歪む円形3Dスライダー | scroll, webgl, slider, distortion, micro-interaction | [memo](sites/2026-07-16-meech213-com/memo.md) |
 | 2026-07-15 | TPLH | 燃えるエフェクトで靡く旗が切り替わるアニメーションを、デモページ内で小さく再現する。 | animation, webgl, transition, flag, fire | [memo](sites/2026-07-15-tplh-net/memo.md) |
 | 2026-07-14 | CRAV Burgers | 具材が積み上がるローディングと、スクロールで貼り付くシール演出を、1つのデモサイト内で連続して体験できるようにする。 | loading, scroll, micro-interaction, sticker, transition | [memo](sites/2026-07-14-cravburgers-shop/memo.md) |
